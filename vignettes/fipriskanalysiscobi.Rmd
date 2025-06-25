@@ -401,6 +401,11 @@ usethis::use_data(sensitivitysp, overwrite = TRUE)
 data.description <-sinew::makeOxygen(sensitivitysp)
 cat(data.description, file=here::here("R",paste0("data-","sensitivitysp.R")))
 
+```
+
+```{r}
+data(sensitivitysp)
+
 
 sensibilidadsp.plot <- sensitivitysp %>%
   dplyr::mutate(nombre_comun=dplyr::if_else(species=="lutjanus vivanus","pargo ojo amarillo", nombre_comun)) %>%
@@ -413,7 +418,7 @@ sensibilidadsp.plot <- sensitivitysp %>%
     ggplot2::scale_color_manual(values = RColorBrewer::brewer.pal(3, "Set2"), name = "Escenario") +
     ggplot2::facet_wrap(.~scenario, ncol=3) +
     ggplot2::labs(
-      title = "Peligro de las especies",
+      title = "Peligro para las especies",
       x = "Especie",
       y = "Peligro"
     ) +
@@ -426,6 +431,7 @@ ggplot2::ggsave("peligro_sp.png", sensibilidadsp.plot, path = here::here("output
 
 
 ```
+
 
 PCA species sensitivity 
 ```{r}
