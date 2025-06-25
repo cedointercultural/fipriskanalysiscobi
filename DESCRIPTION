@@ -1,0 +1,41 @@
+Package: fipriskanalysissmfish
+Title: Risk analysis fishing cooperatives
+Version: 0.0.0.9000
+Authors@R: 
+    person("Hem Nalini", "Morzaria-Luna", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 2.10)
+LazyData: true
+Imports: 
+    dplyr,
+    exactextractr,
+    googlesheets4,
+    ggbiplot,
+    ggforce,
+    here,
+    magrittr,
+    readr,
+    sf,
+    sp,
+    stringr,
+    terra,
+    tidyselect,
+    tidyr,
+    topsis,
+    psych,
+    nFactors,
+    factoextra,
+    caret,
+    stringi,
+    rphylopic,
+    ggimage,
+    grid
+Remotes:
+    adamlilith/enmSdmX
